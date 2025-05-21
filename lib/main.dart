@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sudoku/pages/board.dart';
-import 'package:sudoku/pages/signin.dart';
-import 'package:sudoku/pages/tabs/root_page.dart';
+import 'package:real_sudoku/pages/board.dart';
+import 'package:real_sudoku/pages/root_page.dart';
+import 'package:real_sudoku/pages/signin_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (_) => const RootPage(),
-        '/signin': (_) => const Signin(),
+        '/signin': (_) => const SigninPage(),
         '/board': (_) => const Board(),
       },
     );

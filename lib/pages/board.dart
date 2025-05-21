@@ -23,18 +23,18 @@ class _BoardState extends State<Board> {
             onPressed: () {},
           ),
         ],
-        actionsIconTheme: IconThemeData(size: 32),
+        actionsIconTheme: const IconThemeData(size: 32),
       ),
       body: Column(
         children: [
-          BoardGrid(),
+          const BoardGrid(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton.icon(
                 onPressed: () {},
-                label: Icon(
+                label: const Icon(
                   Icons.undo,
                   size: 18,
                 ),
@@ -47,7 +47,7 @@ class _BoardState extends State<Board> {
               ),
               ElevatedButton.icon(
                 onPressed: () {},
-                label: Icon(
+                label: const Icon(
                   Icons.clear,
                   size: 18,
                 ),
@@ -146,8 +146,8 @@ class _BoardGridState extends State<BoardGrid> {
                       color: isThickBottom ? Colors.black : Colors.blueGrey,
                       width: isThickBottom ? 1.5 : 1.0,
                     ),
-                    left: BorderSide(color: Colors.blueGrey, width: 0.5),
-                    top: BorderSide(color: Colors.blueGrey, width: 0.5),
+                    left: const BorderSide(color: Colors.blueGrey, width: 0.5),
+                    top: const BorderSide(color: Colors.blueGrey, width: 0.5),
                   ),
                 ),
                 alignment: Alignment.center,

@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               DropdownButton(
-                items: [
+                items: const [
                   DropdownMenuItem(
                     value: 'easy',
                     child: Text('Easy'),
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                 onChanged: (changedValue) {},
                 elevation: 4,
                 borderRadius: BorderRadius.circular(16),
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
               ),
               SizedBox(
                 width: double.infinity,
@@ -53,9 +53,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                     foregroundColor: Colors.white,
                   ),
-                  child: Text(
+                  child: const Text(
                     "Start New Game",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
