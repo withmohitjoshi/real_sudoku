@@ -8,11 +8,22 @@ class Board extends StatefulWidget {
 }
 
 class _BoardState extends State<Board> {
+  String? selectedLevel;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final settings = ModalRoute.of(context)?.settings;
+    if (settings != null) {
+      print(settings.arguments);
+      selectedLevel = settings.arguments as String?;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(''),
         actions: [
           IconButton(
             icon: const Icon(Icons.play_arrow),

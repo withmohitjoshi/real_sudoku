@@ -4,6 +4,7 @@ import 'package:real_sudoku/pages/root_page.dart';
 import 'package:real_sudoku/pages/signin_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
