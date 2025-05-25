@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sudoku/pages/tabs/home/home_page.dart';
-import 'package:sudoku/pages/tabs/profile/profile_page.dart';
+import 'package:real_sudoku/pages/home_page.dart';
+import 'package:real_sudoku/pages/profile_page.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});
@@ -24,17 +24,17 @@ class _RootPageState extends State<RootPage> {
         children: _pages,
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: const Color.fromARGB(20, 0, 0, 0),
+              color: Color.fromARGB(20, 0, 0, 0),
               blurRadius: 10,
-              offset: const Offset(0, -2),
+              offset: Offset(0, -2),
             ),
           ],
           border: Border(
             top: BorderSide(
-              color: const Color.fromARGB(50, 96, 125, 139),
+              color: Color.fromARGB(50, 96, 125, 139),
               width: 1,
             ),
           ),

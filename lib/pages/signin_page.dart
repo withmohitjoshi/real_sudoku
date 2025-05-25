@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:sudoku/pages/tabs/home/home_page.dart';
+import 'package:real_sudoku/pages/root_page.dart';
 
-class Signin extends StatefulWidget {
-  const Signin({super.key});
+class SigninPage extends StatefulWidget {
+  const SigninPage({super.key});
 
   @override
-  State<Signin> createState() => _SigninState();
+  State<SigninPage> createState() => _SigninPageState();
 }
 
-class _SigninState extends State<Signin> {
+class _SigninPageState extends State<SigninPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _SigninState extends State<Signin> {
           ),
           Container(
             padding: const EdgeInsets.symmetric(vertical: 40),
-            child: Text(
+            child: const Text(
               "Play Real Sudoku",
               style: TextStyle(
                 fontSize: 28,
@@ -29,7 +29,7 @@ class _SigninState extends State<Signin> {
               ),
             ),
           ),
-          Spacer(
+          const Spacer(
             flex: 1,
           ),
           Padding(
@@ -56,12 +56,12 @@ class _SigninState extends State<Signin> {
                       width: 22,
                       height: 22,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
-                    Text(
+                    const Text(
                       "Continue with Google",
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 16,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -72,8 +72,8 @@ class _SigninState extends State<Signin> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 26.0),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 26.0),
             child: Divider(),
           ),
           Padding(
@@ -85,7 +85,7 @@ class _SigninState extends State<Signin> {
                   Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const HomePage(),
+                      builder: (context) => const RootPage(),
                     ),
                     (route) => false,
                   );
@@ -100,9 +100,9 @@ class _SigninState extends State<Signin> {
                   ),
                   foregroundColor: Colors.white,
                 ),
-                child: Text(
+                child: const Text(
                   "Play as Guest",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 16,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -111,7 +111,7 @@ class _SigninState extends State<Signin> {
               ),
             ),
           ),
-          Spacer(
+          const Spacer(
             flex: 2,
           ),
         ],
