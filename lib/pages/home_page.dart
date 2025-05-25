@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_sudoku/pages/board/board.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const List<Map<String, String>> _dropdownItems = [
@@ -104,8 +105,14 @@ class _HomePageState extends State<HomePage> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/board',
-                        arguments: selectedLevel);
+                    // Navigator.pushNamed(context, '/board',
+                    //     arguments: selectedLevel);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return Board(
+                        selectedLevel: selectedLevel,
+                      );
+                    }));
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(

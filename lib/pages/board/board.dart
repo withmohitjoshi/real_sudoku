@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:real_sudoku/pages/board/sudoku_actions.dart';
 import 'package:real_sudoku/pages/board/sudoku_board.dart';
+import 'package:real_sudoku/utils/make_sudoku_game.dart';
 
 class Board extends StatefulWidget {
-  const Board({super.key});
+  final String? selectedLevel;
+  const Board({super.key, required this.selectedLevel});
 
   @override
   State<Board> createState() => _BoardState();
 }
 
 class _BoardState extends State<Board> {
-  String? selectedLevel;
+  late List<List<int>> _sudokuGrid;
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    final settings = ModalRoute.of(context)?.settings;
-    if (settings != null) {
-      selectedLevel = settings.arguments as String?;
-    }
+  void initState() {
+    super.initState();
+    _sudokuGrid = makeSudokuGame(widget.selectedLevel);
   }
 
   @override
@@ -37,10 +36,12 @@ class _BoardState extends State<Board> {
           ),
         ],
       ),
-      body: const Column(
+      body: Column(
         children: [
-          SudokuBoard(),
-          SudokuActions(),
+          SudokuBoard(
+            sudokuGrid: _sudokuGrid,
+          ),
+          const SudokuActions(),
         ],
       ),
     );

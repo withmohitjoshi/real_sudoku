@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:real_sudoku/pages/board/sudoku_cell.dart';
 
 class SudokuBoard extends StatefulWidget {
-  const SudokuBoard({super.key});
+  final List<List<int>> sudokuGrid;
+  const SudokuBoard({super.key, required this.sudokuGrid});
 
   @override
   State<SudokuBoard> createState() => _SudokuBoardState();
 }
 
 class _SudokuBoardState extends State<SudokuBoard> {
-  late List<List<int>> _sudokuGrid;
+  late List<List<int>> _grid;
 
   @override
   void initState() {
     super.initState();
-    _sudokuGrid = List.generate(9, (_) => List.generate(9, (_) => 0));
+    _grid = widget.sudokuGrid;
   }
 
   @override
@@ -42,7 +43,7 @@ class _SudokuBoardState extends State<SudokuBoard> {
               final row = index ~/ 9;
               final col = index % 9;
               return SudokuCell(
-                value: _sudokuGrid[row][col],
+                value: _grid[row][col],
                 row: row,
                 col: col,
               );

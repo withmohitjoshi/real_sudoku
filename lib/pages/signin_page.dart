@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:real_sudoku/pages/home_page.dart';
+import 'package:real_sudoku/pages/root_page.dart';
 
 class SigninPage extends StatefulWidget {
   const SigninPage({super.key});
@@ -85,7 +85,7 @@ class _SigninPageState extends State<SigninPage> {
                   Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const HomePage(),
+                      builder: (context) => const RootPage(),
                     ),
                     (route) => false,
                   );

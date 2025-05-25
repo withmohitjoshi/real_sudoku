@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:real_sudoku/pages/board/board.dart';
-import 'package:real_sudoku/pages/home_page.dart';
-// import 'package:real_sudoku/pages/root_page.dart';
-// import 'package:real_sudoku/pages/signin_page.dart';
+// import 'package:real_sudoku/pages/board/board.dart';
+// import 'package:real_sudoku/pages/home_page.dart';
+import 'package:real_sudoku/pages/root_page.dart';
+import 'package:real_sudoku/pages/signin_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,10 +26,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (_) => const HomePage(),
-        // '/': (_) => const RootPage(),
-        // '/signin': (_) => const SigninPage(),
-        '/board': (_) => const Board(),
+        // '/': (_) => const HomePage(),
+        '/': (_) => true ? SigninPage() : const RootPage(),
+        '/signin': (_) => const SigninPage(),
+        // '/board': (_) => const Board(),
       },
     );
   }
