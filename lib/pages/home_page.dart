@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.only(bottom: 24.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.blueGrey[100],
+                    color: Theme.of(context).colorScheme.primaryContainer,
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: DropdownButton(
@@ -95,7 +95,8 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.black,
                     ),
                     value: selectedLevel,
-                    dropdownColor: Colors.grey[300],
+                    dropdownColor:
+                        Theme.of(context).colorScheme.primaryContainer,
                   ),
                 ),
               ),
@@ -110,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
                     ),
-                    backgroundColor: Colors.lightBlue,
+                    backgroundColor: Theme.of(context).primaryColor,
                     padding: const EdgeInsets.symmetric(
                       vertical: 16,
                     ),
@@ -120,7 +121,6 @@ class _HomePageState extends State<HomePage> {
                     "Start New Game",
                     style: TextStyle(
                       fontSize: 16,
-                      color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

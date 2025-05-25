@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:real_sudoku/pages/board.dart';
-import 'package:real_sudoku/pages/root_page.dart';
-import 'package:real_sudoku/pages/signin_page.dart';
+import 'package:real_sudoku/pages/board/board.dart';
+import 'package:real_sudoku/pages/home_page.dart';
+// import 'package:real_sudoku/pages/root_page.dart';
+// import 'package:real_sudoku/pages/signin_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,13 +17,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sudoku',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF4E71FF)),
         useMaterial3: true,
+        scaffoldBackgroundColor: Theme.of(context).secondaryHeaderColor,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Theme.of(context).secondaryHeaderColor,
+        ),
       ),
       initialRoute: '/',
       routes: {
-        '/': (_) => const RootPage(),
-        '/signin': (_) => const SigninPage(),
+        '/': (_) => const HomePage(),
+        // '/': (_) => const RootPage(),
+        // '/signin': (_) => const SigninPage(),
         '/board': (_) => const Board(),
       },
     );
